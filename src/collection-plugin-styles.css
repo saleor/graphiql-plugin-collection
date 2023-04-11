@@ -1,0 +1,67 @@
+.collection-plugin-container {
+  background-color: hsl(var(--color-base));
+}
+
+.collection-plugin-operation {
+  background-color: hsl(var(--color-base)); 
+  border: 1px solid hsla(var(--color-neutral), 0.1);
+  border-radius: var(--border-radius-4);
+  color: hsl(var(--color-neutral));
+  padding: var(--px-4) var(--px-6);
+  display: flex;
+
+  &:hover {
+    color: hsla(var(--color-neutral), 1);
+    background-color: hsla(var(--color-neutral), var(--alpha-background-light));
+  }
+}
+
+.collection-plugin-operation-type {
+  display: flex;
+  justify-content: center;
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius-4);
+  width: 2rem;
+  margin-right: var(--px-8);
+}
+
+.collection-plugin-operation-query {
+  color: hsl(var(--color-primary));
+  background-color: hsla(var(--color-primary), 0.1);
+}
+
+.collection-plugin-operation-mutation {
+  color: hsl(var(--color-secondary));
+  background-color: hsla(var(--color-secondary), 0.1);
+}
+
+.collection-plugin-operation-item {
+  display: flex;
+  flex: 1 1 0;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-mono);
+}
+
+.collection-plugin-header {
+  border-bottom: 1px solid hsla(var(--color-neutral), 0.1);
+  background-color: hsl(var(--color-base)); 
+  line-height: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: hsla(var(--color-neutral), 0.75);
+}
+.collection-plugin-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.collection-plugin-item {
+  margin: var(--px-4) 0;
+  width: 100%;
+}
+
+.collection-plugin-button {
+  display: block;
+  width: 100% !important;
+}
