@@ -2,6 +2,9 @@
 
 This plugin allows you to manage collections of operations (queries or mutations) in GraphiQL. You can save your frequently used operations into collections and quickly access them from the GraphiQL interface.
 
+<img width="1827" alt="CleanShot 2023-04-11 at 18 13 14@2x" src="https://user-images.githubusercontent.com/200613/231229126-5603864b-4de4-46aa-b276-7abea1b1f689.png">
+
+
 ## Features
 
  - [x] Save queries and mutations to collections
