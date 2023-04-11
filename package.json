@@ -1,6 +1,6 @@
 {
   "name": "@saleor/graphiql-plugin-collection",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "main": "dist/graphiql-plugin-collection.cjs",
   "module": "dist/graphiql-plugin-collection.js",
