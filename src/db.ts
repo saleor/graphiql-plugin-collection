@@ -22,7 +22,3 @@ export class CustomDexie extends Dexie {
     });
   }
 }
-
-const db = new CustomDexie();
-
-export { db }

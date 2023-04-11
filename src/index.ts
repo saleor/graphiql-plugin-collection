@@ -1,1 +1,0 @@
-export { useCollectionPlugin } from './CollectionPlugin.js';

@@ -1,22 +1,11 @@
 import { Button, useEditorContext } from '@graphiql/react';
-import { useMemo, useRef } from 'react';
 import { DateTime } from 'luxon';
 
-import type { GraphiQLPlugin } from '@graphiql/react';
-import "./collection-plugin-styles.css"
-
-interface CollectionPluginProps {
-  operation: string;
-  operationName: string;
-  handleEditQuery: (query: string) => void;
-}
-
-import { db } from './db.js';
 import { useLiveQuery } from 'dexie-react-hooks';
 import OperationItem from './Operation.js';
-import { CollectionPluginIcon } from './CollectionPluginIcon.js';
+import { CollectionPluginProps } from './types.js';
 
-const CollectionPlugin = ({ operation, operationName, handleEditQuery }: CollectionPluginProps) => {
+export const CollectionPlugin = ({ operation, operationName, handleEditQuery, db }: CollectionPluginProps) => {
   const { pathname } = window.location;
   const { setOperationName } = useEditorContext({ nonNull: true });
 
@@ -100,19 +89,5 @@ const CollectionPlugin = ({ operation, operationName, handleEditQuery }: Collect
         ))}
       </ul>
     </div>
-  );
-};
-
-export const useCollectionPlugin = (props: CollectionPluginProps) => {
-  const propsRef = useRef(props);
-  propsRef.current = props;
-
-  return useMemo<GraphiQLPlugin>(
-    () => ({
-      title: 'Save playground',
-      icon: () => <CollectionPluginIcon />,
-      content: () => <CollectionPlugin {...propsRef.current} />,
-    }),
-    []
   );
 };
